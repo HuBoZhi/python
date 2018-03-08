@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>form_Main_Form</class>
+ <widget class="QMainWindow" name="form_Main_Form">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>573</width>
-    <height>555</height>
+    <width>570</width>
+    <height>550</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="layoutWidget">
+   <widget class="QWidget" name="gridLayoutWidget">
     <property name="geometry">
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>181</width>
-      <height>461</height>
+      <width>571</width>
+      <height>451</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QTreeView" name="treeView"/>
+    <layout class="QGridLayout" name="Table">
+     <item row="0" column="0">
+      <layout class="QGridLayout" name="NewCode"/>
      </item>
     </layout>
    </widget>
@@ -35,7 +35,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>573</width>
+     <width>570</width>
      <height>26</height>
     </rect>
    </property>
@@ -44,17 +44,16 @@
      <string>文件</string>
     </property>
     <addaction name="fileOpen"/>
-    <addaction name="new_user"/>
     <addaction name="fileSave"/>
-    <addaction name="Save as"/>
+    <addaction name="Save_as"/>
     <addaction name="change"/>
    </widget>
    <widget class="QMenu" name="menu_2">
     <property name="title">
      <string>编辑</string>
     </property>
+    <addaction name="new_user"/>
     <addaction name="New"/>
-    <addaction name="new_2"/>
    </widget>
    <widget class="QMenu" name="menu_3">
     <property name="title">
@@ -81,25 +80,8 @@
    <addaction name="fileSave"/>
    <addaction name="new_user"/>
    <addaction name="New"/>
-   <addaction name="new_2"/>
    <addaction name="About"/>
   </widget>
-  <action name="New">
-   <property name="checkable">
-    <bool>false</bool>
-   </property>
-   <property name="icon">
-    <iconset>
-     <normalon>res/New.ico</normalon>
-    </iconset>
-   </property>
-   <property name="text">
-    <string>新建分组</string>
-   </property>
-   <property name="toolTip">
-    <string>新建分组</string>
-   </property>
-  </action>
   <action name="fileSave">
    <property name="icon">
     <iconset>
@@ -112,7 +94,7 @@
     <string>Ctrl+S</string>
    </property>
   </action>
-  <action name="Save as">
+  <action name="Save_as">
    <property name="text">
     <string>另存为...</string>
    </property>
@@ -146,7 +128,7 @@
     <string>更改登录密吗</string>
    </property>
   </action>
-  <action name="new_2">
+  <action name="New">
    <property name="icon">
     <iconset>
      <normaloff>res/userNew.ico</normaloff>

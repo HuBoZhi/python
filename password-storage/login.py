@@ -7,6 +7,8 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import QLineEdit
+
 
 class Ui_form_in(object):
     OpenMain = QtCore.pyqtSignal(int)
@@ -15,7 +17,7 @@ class Ui_form_in(object):
         MainWindow.resize(500, 300)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-
+        MainWindow.setFixedSize(MainWindow.width(), MainWindow.height())
         self.LOGON = QtWidgets.QPushButton(self.centralwidget)
         self.LOGON.setGeometry(QtCore.QRect(100, 190, 140, 40))
         self.LOGON.setObjectName("LOGON")
@@ -29,6 +31,9 @@ class Ui_form_in(object):
         self.password = QtWidgets.QLineEdit(self.centralwidget)
         self.password.setGeometry(QtCore.QRect(170, 110, 230, 30))
         self.password.setObjectName("password")
+        self.password.setEchoMode(QLineEdit.Password)
+        self.username.setPlaceholderText("请输入用户名...")
+        self.password.setPlaceholderText("请输入密码...")
 
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(100, 120, 45, 19))
